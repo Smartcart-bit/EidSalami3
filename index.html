@@ -2,21 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎉 Eid Salami</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1 class="eid-title">🎉 Eid Mubarak!</h1>
-    <div id="animation" class="lottie"></div>
-    <p id="message" class="message"></p>
-    <div class="amount-box"><span id="amount" class="amount"></span></div>
-    <p id="quote" class="quote"></p>
-    <button id="copyBtn">📋 Copy Link to Share</button>
-    <p id="copied" class="copied-message">Link copied!</p>
+
+    <!-- Show this if link has query -->
+    <div id="salami-section" style="display:none;">
+      <h1 class="eid-title">🎉 Eid Mubarak!</h1>
+      <div id="animation" class="lottie"></div>
+      <p id="message" class="message"></p>
+      <div class="amount-box"><span id="amount" class="amount"></span></div>
+      <p id="quote" class="quote"></p>
+      <button id="copyBtn">📋 Copy Link to Share</button>
+      <p id="copied" class="copied-message">Link copied!</p>
+    </div>
+
+    <!-- Show this if no query — input form -->
+    <div id="form-section">
+      <h1 class="eid-title">🎁 Send Eid Salami</h1>
+      <input type="text" id="inputSender" placeholder="Your Name" />
+      <input type="text" id="inputReceiver" placeholder="Receiver's Name" />
+      <input type="number" id="inputAmount" placeholder="Amount (৳)" />
+      <button id="generateBtn">🔗 Generate & Copy Link</button>
+      <p id="generated" class="copied-message">Link copied! Paste and send it via Messenger or WhatsApp 💌</p>
+    </div>
+
   </div>
   <div class="builder-name">Developer Name: Mohammad Ullah, RUET EEE</div>
   <canvas id="confetti-canvas"></canvas>
