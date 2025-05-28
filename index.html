@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Eid Salami</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Send Eid Salami</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1 class="eid-title">🎉 Eid Salami 🎉</h1>
-
-    <p><strong>From:</strong> <span id="sender">...</span></p>
-    <p><strong>To:</strong> <span id="receiver">...</span></p>
-
-    <div id="quote" class="quote">Loading quote...</div>
-    <div class="animation">💸💫 Eid Mubarak! 💫💸</div>
-
-    <!-- Hidden Amount Reveal Section -->
-    <div id="amount-section" style="margin-top: 20px;">
-      <button onclick="revealAmount()">🎁 Click to reveal your Salami!</button>
-      <div id="amountDetails" style="display: none;">
-        <p><strong>Amount:</strong> <span id="amountValue"></span> Taka</p>
-
-        <!-- Share Buttons -->
-        <div class="share-buttons">
-          <h3>Share this Salami</h3>
-          <a id="waLink" target="_blank">📱 Share on WhatsApp</a>
-          <a id="msLink" target="_blank">💬 Share on Messenger</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Toggle Send Another -->
-    <div class="send-toggle">
-      <button onclick="toggleSend()">🎁 Do you want to give someone?</button>
-    </div>
-
-    <!-- Hidden Send Section -->
-    <div id="sendSection" style="display: none;" class="share-box">
-      <h3>Send Salami to Someone Else</h3>
-      <input type="text" id="newSender" placeholder="Your Name">
-      <input type="text" id="newReceiver" placeholder="Receiver's Name">
-      <input type="number" id="newAmount" placeholder="Amount (Taka)">
-      <button onclick="generateLink()">Generate Link</button>
-      <p id="generatedLink" class="generated-link"></p>
+    <h1>🎁 Send Virtual Eid Salami</h1>
+    <input type="text" id="sender" placeholder="Your Name" />
+    <input type="text" id="receiver" placeholder="Friend's Name" />
+    <input type="number" id="amount" placeholder="Amount (Tk)" />
+    <button onclick="generateLink()">Generate Link</button>
+    
+    <div id="link-section" style="display: none;">
+      <p>🔗 Share this link:</p>
+      <input type="text" id="generatedLink" readonly />
     </div>
   </div>
+  <p class="credit">Developer Name Mohammad Ullah, EEE RUET</p>
 
-  <div class="builder">Developer: Mohammad Ullah, EEE RUET</div>
+  <script>
+    function generateLink() {
+      const sender = document.getElementById("sender").value.trim();
+      const receiver = document.getElementById("receiver").value.trim();
+      const amount = document.getElementById("amount").value.trim();
 
-  <script src="script.js"></script>
+      if (!sender || !receiver || !amount) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const baseURL = window.location.href.replace("index.html", "");
+      const url = `${baseURL}salami.html?from=${encodeURIComponent(sender)}&to=${encodeURIComponent(receiver)}&amount=${amount}`;
+
+      document.getElementById("generatedLink").value = url;
+      document.getElementById("link-section").style.display = "block";
+    }
+  </script>
 </body>
 </html>
