@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eid Salami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="eid-title">🎉 Eid Salami 🎉</h1>
+
+    <p><strong>From:</strong> <span id="sender">...</span></p>
+    <p><strong>To:</strong> <span id="receiver">...</span></p>
+
+    <div id="quote" class="quote">Loading quote...</div>
+    <div class="animation">💸💫 Eid Mubarak! 💫💸</div>
+
+    <!-- Hidden Amount Reveal Section -->
+    <div id="amount-section" style="margin-top: 20px;">
+      <button onclick="revealAmount()">🎁 Click to reveal your Salami!</button>
+      <div id="amountDetails" style="display: none;">
+        <p><strong>Amount:</strong> <span id="amountValue"></span> Taka</p>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+          <h3>Share this Salami</h3>
+          <a id="waLink" target="_blank">📱 Share on WhatsApp</a>
+          <a id="msLink" target="_blank">💬 Share on Messenger</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toggle Send Another -->
+    <div class="send-toggle">
+      <button onclick="toggleSend()">🎁 Do you want to give someone?</button>
+    </div>
+
+    <!-- Hidden Send Section -->
+    <div id="sendSection" style="display: none;" class="share-box">
+      <h3>Send Salami to Someone Else</h3>
+      <input type="text" id="newSender" placeholder="Your Name">
+      <input type="text" id="newReceiver" placeholder="Receiver's Name">
+      <input type="number" id="newAmount" placeholder="Amount (Taka)">
+      <button onclick="generateLink()">Generate Link</button>
+      <p id="generatedLink" class="generated-link"></p>
+    </div>
+  </div>
+
+  <div class="builder">Developer: Mohammad Ullah, EEE RUET</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
