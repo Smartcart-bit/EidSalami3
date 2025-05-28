@@ -1,220 +1,26 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-45deg, #fff8e1, #ffe0b2, #ffccbc, #fce4ec);
-  background-size: 400% 400%;
-  animation: backgroundShift 15s ease infinite;
-  color: #333;
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
   text-align: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
 }
 
-.container {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-  animation: fadeIn 1.2s ease;
-}
-
-.eid-title {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  color: #ff4081;
-  margin-bottom: 0.5rem;
-  animation: bounce 2s infinite alternate;
-}
-
-.message {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.amount-box {
-  display: inline-block;
-  background: #00c853;
+#generateBtn {
+  background: #00bcd4;
   color: white;
-  font-size: 2.5rem;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: bold;
-  margin: 1rem auto;
-  animation: pulse 1.5s infinite;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-#copyBtn {
+  border: none;
   padding: 10px 20px;
   font-size: 1rem;
-  border: none;
   border-radius: 25px;
-  background: #ffd54f;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-#copyBtn:hover {
-  background: #ffca28;
-}
-
-.copied-message {
-  font-size: 0.9rem;
-  color: #4caf50;
-  display: none;
   margin-top: 10px;
 }
 
-.builder-name {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 0.75rem;
-  color: #888;
-  opacity: 0.6;
-}
-
-.lottie {
-  width: 200px;
-  margin: 1rem auto;
-}
-
-/* Background animation */
-@keyframes backgroundShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Other animations */
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-45deg, #fff8e1, #ffe0b2, #ffccbc, #fce4ec);
-  background-size: 400% 400%;
-  animation: backgroundShift 15s ease infinite;
-  color: #333;
-  text-align: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.container {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-  animation: fadeIn 1.2s ease;
-}
-
-.eid-title {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  color: #ff4081;
-  margin-bottom: 0.5rem;
-  animation: bounce 2s infinite alternate;
-}
-
-.message {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.amount-box {
-  display: inline-block;
-  background: #00c853;
-  color: white;
-  font-size: 2.5rem;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: bold;
-  margin: 1rem auto;
-  animation: pulse 1.5s infinite;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-#copyBtn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 25px;
-  background: #ffd54f;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-#copyBtn:hover {
-  background: #ffca28;
-}
-
-.copied-message {
-  font-size: 0.9rem;
-  color: #4caf50;
-  display: none;
-  margin-top: 10px;
-}
-
-.builder-name {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 0.75rem;
-  color: #888;
-  opacity: 0.6;
-}
-
-.lottie {
-  width: 200px;
-  margin: 1rem auto;
-}
-
-/* Background animation */
-@keyframes backgroundShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Other animations */
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+#generateBtn:hover {
+  background: #0097a7;
 }
