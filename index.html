@@ -2,42 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Send Eid Salami</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Eid Salami</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>🎁 Send Virtual Eid Salami</h1>
-    <input type="text" id="sender" placeholder="Your Name" />
-    <input type="text" id="receiver" placeholder="Friend's Name" />
-    <input type="number" id="amount" placeholder="Amount (Tk)" />
-    <button onclick="generateLink()">Generate Link</button>
-    
-    <div id="link-section" style="display: none;">
-      <p>🔗 Share this link:</p>
-      <input type="text" id="generatedLink" readonly />
-    </div>
+    <h1 class="eid-title">🎉 Eid Mubarak!</h1>
+    <div id="animation" class="lottie"></div>
+    <p id="message" class="message"></p>
+    <div class="amount-box"><span id="amount" class="amount"></span></div>
+    <p id="quote" class="quote"></p>
+    <button id="copyBtn">📋 Copy Link to Share</button>
+    <p id="copied" class="copied-message">Link copied!</p>
   </div>
-  <p class="credit">Developer Name: Mohammad Ullah, EEE RUET</p>
-
-  <script>
-    function generateLink() {
-      const sender = document.getElementById("sender").value.trim();
-      const receiver = document.getElementById("receiver").value.trim();
-      const amount = document.getElementById("amount").value.trim();
-
-      if (!sender || !receiver || !amount) {
-        alert("Please fill in all fields.");
-        return;
-      }
-
-      const baseURL = window.location.href.replace("index.html", "");
-      const url = `${baseURL}salami.html?from=${encodeURIComponent(sender)}&to=${encodeURIComponent(receiver)}&amount=${amount}`;
-
-      document.getElementById("generatedLink").value = url;
-      document.getElementById("link-section").style.display = "block";
-    }
-  </script>
+  <div class="builder-name">Developer Name: Mohammad Ullah, RUET EEE</div>
+  <canvas id="confetti-canvas"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>
