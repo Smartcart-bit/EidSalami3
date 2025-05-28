@@ -1,128 +1,99 @@
-/* General body and layout */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fffaf0;
-  color: #333;
-  text-align: center;
-  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff4e6, #ffe6ec);
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  animation: fadeIn 1.2s ease-in;
 }
 
-/* Container box */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .container {
-  max-width: 600px;
-  margin: auto;
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  position: relative;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: popIn 0.8s ease;
 }
 
-/* Title */
-.eid-title {
-  color: #e67e22;
-  font-size: 2em;
-  margin-bottom: 15px;
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-/* Quote */
-.quote {
-  margin: 20px auto;
-  font-style: italic;
-  font-size: 1.1em;
-  color: #00695c;
-  max-width: 90%;
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff6f61;
+  animation: bounce 1.5s infinite alternate;
 }
 
-/* Animation text */
-.animation {
-  font-size: 1.8em;
-  margin-top: 15px;
-  animation: float 1.5s ease-in-out infinite;
-}
-
-/* Floating animation */
-@keyframes float {
+@keyframes bounce {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
 }
 
-/* Button styles */
+input {
+  margin: 12px 0;
+  padding: 12px 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
 button {
-  padding: 10px 20px;
-  margin: 10px auto;
-  background: #2ecc71;
+  background: #27ae60;
   color: white;
+  padding: 14px 24px;
   border: none;
   border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
   cursor: pointer;
-  font-size: 1em;
+  transition: background 0.3s ease;
 }
-
 button:hover {
-  background: #27ae60;
+  background: #219150;
 }
 
-/* Share buttons */
-.share-buttons {
-  margin-top: 20px;
-}
-
-.share-buttons a {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px 15px;
+#link-section input {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 10px;
   border-radius: 6px;
-  background: #3498db;
-  color: white;
-  text-decoration: none;
+  width: 100%;
 }
 
-.share-buttons a:hover {
-  background: #2980b9;
-}
-
-/* Toggle send another */
-.send-toggle {
+.quote {
   margin-top: 25px;
-  padding-top: 10px;
-  border-top: 1px solid #ccc;
+  font-style: italic;
+  color: #555;
+  font-size: 16px;
+  animation: fadeIn 2s ease;
 }
 
-/* Send form section */
-.share-box {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 15px;
-}
-
-.share-box input {
-  padding: 8px;
-  margin: 6px;
-  width: 80%;
-  max-width: 300px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.share-box button {
-  margin-top: 10px;
-}
-
-.generated-link {
-  margin-top: 10px;
-  word-break: break-word;
-  font-size: 0.9em;
-  color: #2980b9;
-}
-
-/* Builder credit */
-.builder {
+.credit {
   position: fixed;
-  bottom: 8px;
-  right: 10px;
+  bottom: 12px;
+  right: 18px;
   font-size: 12px;
-  color: #777;
+  color: #999;
+  font-style: italic;
 }
